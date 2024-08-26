@@ -6,6 +6,7 @@
 # shellcheck disable=SC1091
 
 source $SU_UTILS_FOLDER"/ansi_colors.sh"
+source $SU_UTILS_FOLDER"/ansi_styles.sh"
 source $SU_UTILS_FOLDER"/files.sh"
 
 function main() {
