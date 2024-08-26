@@ -1,0 +1,15 @@
+#!/bin/bash
+#
+# Perform organization of files by extension
+
+# shellcheck disable=SC2086
+# shellcheck disable=SC1091
+
+source $SU_UTILS_FOLDER"/ansi_colors.sh"
+source $SU_UTILS_FOLDER"/files.sh"
+
+function main() {
+    clear
+}
+
+main
