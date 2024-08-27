@@ -59,9 +59,27 @@ function organize_office_documents() {
     perform_move_operation documents
 }
 
+function organize_images() {
+    # shellcheck disable=SC2034
+    declare -A images=(
+        ["images/png_files"]="png apng"
+        ["images/avif_files"]="avif"
+        ["images/gif_files"]="git"
+        ["images/jpeg_files"]="jpg jpeg jfif pjpeg pjp"
+        ["images/svg_files"]="svg"
+        ["images/webp_files"]="webp"
+        ["images/bitmap_files"]="bmp"
+        ["images/ico_files"]="ico cur"
+        ["images/tiff_files"]="tif tiff"
+    )
+    
+    perform_move_operation images
+}
+
 function main() {
     clear
     organize_office_documents
+    organize_images
 }
 
 main
