@@ -9,6 +9,30 @@ source $SU_UTILS_FOLDER"/ansi_colors.sh"
 source $SU_UTILS_FOLDER"/ansi_styles.sh"
 source $SU_UTILS_FOLDER"/files.sh"
 
+#######################################
+# Iterates over each element in an associative
+# array, then calls move_files passing the key
+# as the first argument and the value
+# (which is spected to be a subarray)
+# is passed as a variable expansion
+#
+# It makes use of a local nameref variable
+# which "points" to the variable that actually
+# stores the associative array
+#
+# Arguments:
+#   $1 - The name of the variable
+#######################################
+function perform_move_operation() {
+    local -n file_types_ref="$1"
+    local sub_array
+
+    for key in "${!file_types_ref[@]}"; do
+        sub_array=("${file_types_ref["${key}"]}")
+        move_files "${key}" "${sub_array[@]}"
+    done
+}
+
 function main() {
     clear
 }
