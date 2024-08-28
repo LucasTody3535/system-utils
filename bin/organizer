@@ -76,10 +76,25 @@ function organize_images() {
     perform_move_operation images
 }
 
+function organize_compressed_files() {
+    # shellcheck disable=SC2034
+    declare -A compressed_files=(
+        ["compressed_files/zip_files"]="zip"
+        ["compressed_files/bzip2_files"]="bz2"
+        ["compressed_files/gzip_files"]="gz"
+        ["compressed_files/tar_files"]="tar"
+        ["compressed_files/rar_files"]="rar"
+        ["compressed_files/seven_zip_files"]="7z"
+    )
+
+    perform_move_operation compressed_files
+}
+
 function main() {
     clear
     organize_office_documents
     organize_images
+    organize_compressed_files
 }
 
 main
