@@ -90,11 +90,22 @@ function organize_compressed_files() {
     perform_move_operation compressed_files
 }
 
+function organize_uncategorized_files() {
+    # shellcheck disable=SC2034
+    declare -A uncategorized_files=(
+        ["uncategorized/jar_files"]="jar"
+        ["uncategorized/drawio_files"]="drawio"
+    )
+
+    perform_move_operation uncategorized_files
+}
+
 function main() {
     clear
     organize_office_documents
     organize_images
     organize_compressed_files
+    organize_uncategorized_files
 }
 
 main
