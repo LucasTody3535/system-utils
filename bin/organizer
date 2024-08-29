@@ -33,8 +33,35 @@ function perform_move_operation() {
     done
 }
 
+function organize_office_documents() {
+    # shellcheck disable=SC2034
+    declare -A documents=(
+        ["ms_office/word/documents"]="doc docx"
+        ["ms_office/word/templates"]="dot dotx"
+        ["ms_office/word/macros"]="docm dotm"
+        ["ms_office/excel/documents"]="xls xlsx"
+        ["ms_office/excel/templates"]="xlt xltx"
+        ["ms_office/excel/macros"]="xlm xlsm xltm"
+        ["ms_office/power_point/documents"]="ppt pptx"
+        ["ms_office/power_point/templates"]="pot potx"
+        ["ms_office/power_point/macros"]="pptm potm ppsm sldm"
+        ["ms_office/power_point/slideshows"]="pps ppsx sldx"
+        ["acrobat/pdf_documents"]="pdf"
+        ["libreoffice/writer/documents"]="odt fodt"
+        ["libreoffice/writer/templates"]="ott"
+        ["libreoffice/calc/documents"]="odf fods"
+        ["libreoffice/calc/templates"]="ots"
+        ["libreoffice/impress/documents"]="odf fodp"
+        ["libreoffice/impress/templates"]="otp"
+        ["libreoffice/impress/drawings"]="odg"
+    )
+
+    perform_move_operation documents
+}
+
 function main() {
     clear
+    organize_office_documents
 }
 
 main
