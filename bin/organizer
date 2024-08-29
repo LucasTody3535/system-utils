@@ -56,7 +56,7 @@ function organize_office_documents() {
         ["libreoffice/impress/drawings"]="odg"
     )
 
-    perform_move_operation documents
+    perform_move_operation "documents"
 }
 
 function organize_images() {
@@ -73,7 +73,7 @@ function organize_images() {
         ["images/tiff_files"]="tif tiff"
     )
     
-    perform_move_operation images
+    perform_move_operation "images"
 }
 
 function organize_compressed_files() {
@@ -87,7 +87,7 @@ function organize_compressed_files() {
         ["compressed_files/seven_zip_files"]="7z"
     )
 
-    perform_move_operation compressed_files
+    perform_move_operation "compressed_files"
 }
 
 function organize_uncategorized_files() {
@@ -97,7 +97,7 @@ function organize_uncategorized_files() {
         ["uncategorized/drawio_files"]="drawio"
     )
 
-    perform_move_operation uncategorized_files
+    perform_move_operation "uncategorized_files"
 }
 
 function organize_apps() {
@@ -109,7 +109,7 @@ function organize_apps() {
         ["applications/linux/appimage_files"]="AppImage"
     )
 
-    perform_move_operation apps
+    perform_move_operation "apps"
 }
 
 function organize_audios() {
@@ -119,7 +119,7 @@ function organize_audios() {
         ["audios/wav_files"]="wav"
     )
     
-    perform_move_operation audios
+    perform_move_operation "audios"
 }
 
 function organize_videos() {
@@ -128,7 +128,7 @@ function organize_videos() {
         ["videos/mp4_files"]="mp4"
     )
 
-    perform_move_operation videos
+    perform_move_operation "videos"
 }
 
 function main() {
