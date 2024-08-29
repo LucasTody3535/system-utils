@@ -137,6 +137,7 @@ function main() {
     organize_images
     organize_compressed_files
     organize_uncategorized_files
+    organize_apps
     organize_audios
     organize_videos
 }
