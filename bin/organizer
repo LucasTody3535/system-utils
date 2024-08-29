@@ -122,6 +122,15 @@ function organize_audios() {
     perform_move_operation audios
 }
 
+function organize_videos() {
+        # shellcheck disable=SC2034
+    declare -A videos=(
+        ["videos/mp4_files"]="mp4"
+    )
+
+    perform_move_operation videos
+}
+
 function main() {
     clear
     organize_office_documents
@@ -129,6 +138,7 @@ function main() {
     organize_compressed_files
     organize_uncategorized_files
     organize_audios
+    organize_videos
 }
 
 main
