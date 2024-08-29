@@ -100,6 +100,18 @@ function organize_uncategorized_files() {
     perform_move_operation uncategorized_files
 }
 
+function organize_apps() {
+    # shellcheck disable=SC2034
+    declare -A apps=(
+        ["applications/windows/msi_files"]="msi"
+        ["applications/windows/exe_files"]="exe"
+        ["applications/linux/deb_files"]="deb"
+        ["applications/linux/appimage_files"]="AppImage"
+    )
+
+    perform_move_operation apps
+}
+
 function main() {
     clear
     organize_office_documents
