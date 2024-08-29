@@ -4,6 +4,8 @@
 
 This project's purpose is to provide a set of utilities that you can use for common tasks.
 
+This project's style is based on google's [Bash styleguide](https://google.github.io/styleguide/shellguide.html)
+
 ## Setting up
 
 Requirements:
