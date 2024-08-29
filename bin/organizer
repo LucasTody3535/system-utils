@@ -112,12 +112,23 @@ function organize_apps() {
     perform_move_operation apps
 }
 
+function organize_audios() {
+    # shellcheck disable=SC2034
+    declare -A audios=(
+        ["audios/mp3_files"]="mp3"
+        ["audios/wav_files"]="wav"
+    )
+    
+    perform_move_operation audios
+}
+
 function main() {
     clear
     organize_office_documents
     organize_images
     organize_compressed_files
     organize_uncategorized_files
+    organize_audios
 }
 
 main
