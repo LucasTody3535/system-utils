@@ -131,6 +131,14 @@ function organize_videos() {
     perform_move_operation "videos"
 }
 
+function organize_so_images() {
+    declare -A so_images=(
+        ["so_images/"]="iso"
+    )
+
+    perform_move_operation "so_images"
+}
+
 function main() {
     clear
     organize_office_documents
@@ -140,6 +148,7 @@ function main() {
     organize_apps
     organize_audios
     organize_videos
+    organize_so_images
 }
 
 main
