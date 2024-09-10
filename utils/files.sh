@@ -72,6 +72,8 @@ function move_files() {
         files_move_action_status="$?"
         if [[ $files_move_action_status -eq 0 ]]; then
             printf " > %bFiles with the extension .%s moved!%b\n" "${FMT_GREEN_FONT}" "${extension}" "${FMT_RESET}"
+        else
+            printf " > %bFailed to move files with the extension .%s%b\n" "${FMT_RED_FONT}" "${extension}" "${FMT_RESET}"
         fi
     done
 }
