@@ -1,4 +1,7 @@
 # shellcheck disable=SC2148
+[[ "$0" =~ ansi_colors.sh ]] && echo "This script is expected to be sourced only!" && exit 1
+
+# shellcheck disable=SC2148
 # shellcheck disable=SC2034
 
 readonly FMT_RED_FONT='\033[1;31m'

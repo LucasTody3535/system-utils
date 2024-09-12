@@ -1,4 +1,7 @@
 # shellcheck disable=SC2148
+[[ "$0" =~ files.sh ]] && echo "This script is expected to be sourced only!" && exit 1
+
+# shellcheck disable=SC2148
 
 #######################################
 # Checks if at least one file with a
