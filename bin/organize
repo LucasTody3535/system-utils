@@ -125,7 +125,7 @@ function organize_audios() {
 }
 
 function organize_videos() {
-        # shellcheck disable=SC2034
+    # shellcheck disable=SC2034
     declare -A videos=(
         ["videos/mp4_files"]="mp4"
     )
@@ -134,6 +134,7 @@ function organize_videos() {
 }
 
 function organize_so_images() {
+    # shellcheck disable=SC2034
     declare -A so_images=(
         ["so_images/"]="iso"
     )
