@@ -5,9 +5,11 @@
 # shellcheck disable=SC2086
 # shellcheck disable=SC1091
 
-source $SU_UTILS_FOLDER"/ansi_colors.sh"
-source $SU_UTILS_FOLDER"/ansi_styles.sh"
-source $SU_UTILS_FOLDER"/files.sh"
+SCRIPT_DIR=$(dirname "${BASH_SOURCE[0]}")
+
+source $SCRIPT_DIR"/utils/ansi_colors.sh"
+source $SCRIPT_DIR"/utils/ansi_styles.sh"
+source $SCRIPT_DIR"/utils/files.sh"
 
 #######################################
 # Iterates over each element in an associative
