@@ -14,3 +14,10 @@ if ! echo "$PATH" | grep -q "$SU_BIN_FOLDER"; then
 else
     echo " bash environment already configured!"
 fi
+
+if ! grep -q "$SU_BIN_FOLDER" "$HOME/.zshrc"; then
+    echo "export PATH=""$PATH":"$SU_BIN_FOLDER" >> ~/.zshrc
+    echo " zsh environment configuration complete!"
+else
+    echo " zsh environment already configured!"
+fi
