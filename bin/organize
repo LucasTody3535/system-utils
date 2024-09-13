@@ -154,10 +154,6 @@ function main() {
         videos) organize_videos ;;
         isos) organize_so_images ;;
         files)
-            if [[ ! (-z "$1") ]]; then
-                echo "Unrecognized option: $1"
-                exit 1
-            fi
             organize_office_documents
             organize_images
             organize_compressed_files
@@ -166,6 +162,10 @@ function main() {
             organize_audios
             organize_videos
             organize_so_images
+            ;;
+        *)
+            echo "Unrecognized option: $1"
+            exit 1
     esac
 }
 
