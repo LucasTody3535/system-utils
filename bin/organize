@@ -177,6 +177,6 @@ while getopts ":m:" opt; do
             shift 2
             ;;
         *)
-            echo "Invalid option: ${opt}!"
+            echo "Invalid option: $1!"
     esac
 done
