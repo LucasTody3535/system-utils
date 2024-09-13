@@ -169,6 +169,8 @@ function main() {
     esac
 }
 
+[[ -z "$1" ]] && main "files" && exit 0
+
 while getopts ":m:" opt; do
     # shellcheck disable=SC2154
     case "$opt" in
