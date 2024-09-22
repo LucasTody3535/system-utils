@@ -51,9 +51,9 @@ function organize_office_documents() {
         ["acrobat/pdf_documents"]="pdf"
         ["libreoffice/writer/documents"]="odt fodt"
         ["libreoffice/writer/templates"]="ott"
-        ["libreoffice/calc/documents"]="odf fods"
+        ["libreoffice/calc/documents"]="ods fods"
         ["libreoffice/calc/templates"]="ots"
-        ["libreoffice/impress/documents"]="odf fodp"
+        ["libreoffice/impress/documents"]="odp fodp"
         ["libreoffice/impress/templates"]="otp"
         ["libreoffice/impress/drawings"]="odg"
     )
